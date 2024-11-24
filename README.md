@@ -17,55 +17,61 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/Sarizeybekk/Drf-BookApi.git
 
-Navigate to the Project Directory 📁
+
+2. **Navigate to the Project Directory ** 📂
+
+   ```bash
+   cd Drf-BookApi
 
 
-cd Drf-BookApi
-2- Create a Virtual Environment 🌐
 
 
-python -m venv venv
-Activate the Virtual Environment ⚙️
+3. **Create a Virtual Environment** 🌐
+    ```bash
 
+     python -m venv venv
+4. ***Activate the Virtual Environment** ⚙️
+    ```bash
 On Windows:
 
+    venv\Scripts\activate
 
 
-venv\Scripts\activate
 On macOS and Linux:
 
 
-source venv/bin/activate
-Install Dependencies 📦
+    source venv/bin/activate
+5. ***Install Dependencies ** 📦
+      ```bash
+
+      pip install -r requirements.txt
+6. ***Apply Migrations** 🗄️
 
 
-pip install -r requirements.txt
-Apply Migrations 🗄️
+    python manage.py migrate
+7. ***Create a Superuser** 👤
 
 
-python manage.py migrate
-Create a Superuser 👤
+       python manage.py createsuperuser
+   8. ***Run the Development Server** 🚀
 
-
-python manage.py createsuperuser
-Run the Development Server 🚀
-
-
-python manage.py runserver
+       ```bash
+       python manage.py runserver
 The API will be accessible at http://127.0.0.1:8000/.
 
-📋 API Endpoints
+# 📋 API Endpoints
+
 The following endpoints are available for managing books:
 
-List Books
-
-GET /api/books/
+- **List Books**  
+  ```http
+  GET /api/books/
 Create Book
 
-POST /api/books/
+   POST /api/books/
 Retrieve Book Details
 
-GET /api/books/{id}/
+   GET /api/books/{id}/
 Update Book
 
 PUT /api/books/{id}/
